@@ -1,0 +1,34 @@
+{
+  "name": "cypresspackage",
+  "version": "1.0.0",
+  "description": "package for cypress automation",
+  "main": "index.js",
+  
+  "scripts": {
+    "trigger-all-bdd-tests-headed": "npx cypress run cypress/integration/cucumber_tests/* --browser chrome --headed",
+    "trigger-all-mocha-tests-headed": "npx cypress run cypress/integration/mocha_tests/* --browser chrome --headed",
+    "trigger-all-bdd-tests-headless": "npx cypress run cypress/integration/cucumber_tests/* --browser chrome",
+    "trigger-all-mocha-tests-headless": "npx cypress run cypress/integration/mocha_tests/* --browser chrome",
+    "launch-bdd-report": "node cypress/cucumber-html-reporter.js",
+    "multi-browser-execution": "npx cypress run --spec cypress/integration/cucumber_tests/* -- --browser chrome --headed & npx cypress run --spec cypress/integration/cucumber_tests/* --browser edge --headed"
+  },
+
+  "author": "veeranki",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.4.0",
+    "cypress": "^6.5.0",
+    "cypress-audit": "^0.3.0",
+    "cypress-cucumber-preprocessor": "^4.0.1"
+  },
+
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/results/cucumber/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+[
+  {
+    "description": "    Add and delete items from the shopping basket",
+    "keyword": "Feature",
+    "name": "Add to cart",
+    "line": 1,
+    "id": "add-to-cart",
+    "tags": [],
+    "uri": "AddToCart.feature",
+    "elements": [
+      {
+        "id": "add-to-cart;add-a-product-to-the-shopping-cart",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Add a product to the shopping cart",
+        "tags": [
+          {
+            "name": "@ShoppingBasketTests",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I launch the website",
+            "result": {
+              "status": "passed",
+              "duration": 3785000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I accept the cookies banner",
+            "result": {
+              "status": "passed",
+              "duration": 1424000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "ProductName"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "82950316"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I search the product",
+            "result": {
+              "status": "passed",
+              "duration": 10851000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "Add \"2\" quantities of product to the cart",
+            "result": {
+              "status": "passed",
+              "duration": 2220000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click on the basket icon",
+            "result": {
+              "status": "failed",
+              "duration": 153000000,
+              "error_message": "TypeError: ErrorConstructor is not a constructor\n    at Object.captureUserInvocationStack (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:179062:20)\n    at $Cy.cy.<computed> [as then] (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:171473:49)\n    at Context.runnable.fn (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:171735:21)\n    at callFn (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:105099:21)\n    at Hook.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:105086:7)\n    at https://www.johnlewis.com/__cypress/runner/cypress_runner.js:177502:28\n    at PassThroughHandlerContext.finallyHandler (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:7319:23)\n    at PassThroughHandlerContext.tryCatcher (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8882:18)\n    at https://www.johnlewis.com/__cypress/runner/cypress_runner.js:5457:25"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should be displayed with Basket screen",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I delete the products from the basket",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Basket should be empty",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
