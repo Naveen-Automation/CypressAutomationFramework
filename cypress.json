@@ -1,16 +1,22 @@
 {
-    "experimentalStudio":true,
-    "chromeWebSecurity": false,
+  "projectId": "eax9em",
+  
+  "experimentalStudio": true,
+  "chromeWebSecurity": false,
 
-    "defaultCommandTimeout":20000,
-    "pageLoadTimeout": 30000,
+  "defaultCommandTimeout": 20000,
+  "pageLoadTimeout": 30000,
 
-    "fixturesFolder":"cypress/fixtures/test_data",
-    "testFiles": ["**/*.feature", "**/*.spec.js"],
-    "includeShadowDom":true,
+  "fixturesFolder": "cypress/fixtures/test_data",
+  "testFiles": [
+    "**/*.feature",
+    "**/*.spec.js"
+  ],
 
-    "env":{
-        "url": "https://www.johnlewis.com/",
-        "browserType":"Chrome"
-    }
+  "includeShadowDom": true,
+
+  "env": {
+    "url": "https://www.johnlewis.com/",
+    "browserType": "Chrome"
+  } 
 }
