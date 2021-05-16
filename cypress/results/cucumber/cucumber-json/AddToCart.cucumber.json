@@ -11,12 +11,12 @@
       {
         "id": "add-to-cart;add-a-product-to-the-shopping-cart",
         "keyword": "Scenario",
-        "line": 9,
+        "line": 8,
         "name": "Add a product to the shopping cart",
         "tags": [
           {
             "name": "@ShoppingBasketTests",
-            "line": 8
+            "line": 7
           }
         ],
         "type": "scenario",
@@ -24,21 +24,21 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
+            "line": 5,
             "name": "I launch the website",
             "result": {
               "status": "passed",
-              "duration": 3785000000
+              "duration": 3042000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 9,
             "name": "I accept the cookies banner",
             "result": {
               "status": "passed",
-              "duration": 1424000000
+              "duration": 276000000
             }
           },
           {
@@ -59,38 +59,47 @@
               }
             ],
             "keyword": "And ",
-            "line": 11,
+            "line": 10,
             "name": "I search the product",
             "result": {
               "status": "passed",
-              "duration": 10851000000
+              "duration": 6984000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
+            "line": 13,
             "name": "Add \"2\" quantities of product to the cart",
             "result": {
               "status": "passed",
-              "duration": 2220000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "I click on the basket icon",
-            "result": {
-              "status": "failed",
-              "duration": 153000000,
-              "error_message": "TypeError: ErrorConstructor is not a constructor\n    at Object.captureUserInvocationStack (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:179062:20)\n    at $Cy.cy.<computed> [as then] (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:171473:49)\n    at Context.runnable.fn (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:171735:21)\n    at callFn (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:105099:21)\n    at Hook.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:105086:7)\n    at https://www.johnlewis.com/__cypress/runner/cypress_runner.js:177502:28\n    at PassThroughHandlerContext.finallyHandler (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:7319:23)\n    at PassThroughHandlerContext.tryCatcher (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (https://www.johnlewis.com/__cypress/runner/cypress_runner.js:8882:18)\n    at https://www.johnlewis.com/__cypress/runner/cypress_runner.js:5457:25"
+              "duration": 2050000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 17,
+            "line": 14,
+            "name": "I should be displayed with \"2\" quantities in the cart",
+            "result": {
+              "status": "failed",
+              "duration": 20117000000,
+              "error_message": "AssertionError: Timed out retrying after 20000ms: Expected to find element: `span.basket-amount-icon--c2f1a`, but never found it.\n    at SearchResultsPC.GetNumberOfItemsInBasketLblElm (https://www.johnlewis.com/__cypress/tests?p=cypress\\integration\\cucumber_tests\\AddToCart.feature:344:48)\n    at Context.eval (https://www.johnlewis.com/__cypress/tests?p=cypress\\integration\\cucumber_tests\\AddToCart.feature:143:47)\n    at Context.resolveAndRunStepDefinition (https://www.johnlewis.com/__cypress/tests?p=cypress\\integration\\cucumber_tests\\AddToCart.feature:20612:9)\n    at Context.eval (https://www.johnlewis.com/__cypress/tests?p=cypress\\integration\\cucumber_tests\\AddToCart.feature:19953:35)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click on the basket icon",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
             "name": "I should be displayed with Basket screen",
             "result": {
               "status": "skipped"
@@ -99,7 +108,7 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 17,
             "name": "I delete the products from the basket",
             "result": {
               "status": "skipped"
@@ -108,7 +117,7 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 19,
+            "line": 18,
             "name": "Basket should be empty",
             "result": {
               "status": "skipped"

@@ -5,28 +5,28 @@ import { should } from "chai"
 class HomeScreenPC {
 
     /********************************************************************************************************
-    Description: Method to launch home screen
+    Description: Method to launch home screen (Action).
     Parameters: NA
     *********************************************************************************************************/
-    VisitHomeScreen() {
+    VisitHomeScreenAct() {
         cy.visit(Cypress.env('url'))
     }
 
 
     /********************************************************************************************************
-    Description: Allow cookies banner for the very first time
+    Description: Allow cookies banner for the very first time (Action).
     Parameters: NA
     *********************************************************************************************************/
-    AcceptCookiesBanner() {
+    AcceptCookiesBannerAct() {
         cy.get('[data-test=allow-all]').should('be.visible').should('be.enabled').click()
     }
 
-    
+
     /********************************************************************************************************
-     Description: Method to Search Product
-     Parameters: NA
+     Description: Method to Search Product (Action).
+     Parameter1: Product name or Product code.
      *********************************************************************************************************/
-    SearchProduct(productName) {
+    SearchProductAct(productName) {
         cy.get('#mobileSearch').should('be.visible').type(productName)
         cy.get('#mobileSearch').type('{enter}')
     }

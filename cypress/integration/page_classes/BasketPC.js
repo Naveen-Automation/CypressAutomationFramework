@@ -1,30 +1,30 @@
 /// <reference types="Cypress" />
 
 class Basket {
-    
+
     /********************************************************************************************************
-    Description: Method to validate if Basket screen is displayed
+    Description: Validate that basket icon element is displayed.
     Parameters: NA
     *********************************************************************************************************/
-    GetBasketLabel() {
-        return cy.contains('h1', 'Basket')
+    ValidateVisibilityOfBasketIcnElm() {
+        cy.contains('h1', 'Basket').should('be.visible')
     }
 
 
     /********************************************************************************************************
-    Description: Method to validate if Empty Basket screen is displayed
+    Description: Validate that empty basket label webelement is displayed.
     Parameters: NA
     *********************************************************************************************************/
-    GetEmptyBasketLabel() {
-        return cy.contains('h1', 'Your basket is empty.')
+    ValidateVisibilityOfEmptyBasketLblElm() {
+        cy.contains('h1', 'Your basket is empty.').should('be.visible')
     }
 
 
     /********************************************************************************************************
-     Description: Click on all the 'remove item' links on the basket screen
+     Description: Click on all the 'remove item' links on the basket screen (Action).
      Parameters: NA
      *********************************************************************************************************/
-    DeleteAllTheProducts() {
+    DeleteAllTheProductsAct() {
         cy.contains('button', 'Remove item').each(($btn, index) => {
             if (index >= 1) {
                 cy.wrap($btn).click()
