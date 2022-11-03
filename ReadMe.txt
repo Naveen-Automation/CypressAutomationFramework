@@ -1,11 +1,8 @@
 
-Implementation Details: Technical Assement is implemented using two different frameworks. Both are present in the same project. Mentioned the details of both below under seperate					sections.
-			I have also mentioned the improvisations that can be done to extend the framework and also added the challenges I have faced and my trouble shooting to solve them.
-
+Implementation Details: Used two different frameworks. Both are present in the same project. Mentioned the details of both below under seperate sections.
+		
 			1. Cucumber framework
 			2. Mocha framework
-
-
 
 
 **************************************************************************
@@ -17,8 +14,6 @@ Tooling & Programing Language:
 	3. Cucumber-html-reporter 5.4.0
 	4. Javascript
 	5. GIT 
-
-Note: Please use cypress test runner to execute the scripts. I coudn't test cypress CLI scripts added in cypress.json.
 
 1. Used BDD framework to write feature files and scenarios along with page object model design pattern.
 	-Added hooks to reduce repeatition of code
@@ -98,21 +93,7 @@ Tooling & Programing Language:
 
 
 **************************************************************************
-Bonus Points:
-**************************************************************************
-1. Bonus point one:
-	 We have lighthouse plugin for client side performance testing but to analyze the performance of cypress tests we can use cypress Dashboard which provides analytics.
-	 
-
-2. Bonus point 2:
-	I have kept the product to be searched configurable from feature file in Cucumber framework and AddToCart.json in Mocha framework.
-	added if block to check if the product is available or not and log accordingly. 
-
-
-
-
-**************************************************************************
-I can improvise both Frameworks by adding below items:
+Pending improvisations :
 **************************************************************************
 
 1. Data driven mechanism using 'Scenario Outline'.
@@ -132,21 +113,12 @@ I can improvise both Frameworks by adding below items:
 8. Adding code quality tools like sonar cube.
 
 
+Alternatives to click if it is not working
 
-
-**************************************************************************
-Challenges Faced:
-**************************************************************************
-
-1. Unsucessful in adding the item to the basket. Cypress is clicking the 'Add to Basket' button but post request is failing. I have attached the screen shots in the 'Application Error'       folder in the root directory.
-	-Being new to Cypress couldn't debug the root cause well.
-	-Though tried different ways to click but no luck. jotted down few options which I tried to troble shoot. There could be few ways which I couldn't try like manipulating DOM or 	 	 sending post request directly as an alternative. 
-		1. Keyboard strokes					-	didn't work
-		2. Doubleclick option					-	didn't work 
-		3. Mousehove + click					-	didn't work 
-		4. Tried with multiple browsers 			-	didn't work 
-		5. Tried with different versions of cypress		-	didn't work 
-		6. Tried to record and replay the events with Cypress studio -	didn't work 
+		1. Keyboard strokes					
+		2. Doubleclick option					
+		3. Mousehove + click						
+		4. Record and replay the events with Cypress studio 
 
 
 
